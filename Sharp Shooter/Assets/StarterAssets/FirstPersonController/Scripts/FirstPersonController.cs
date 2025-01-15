@@ -129,6 +129,7 @@ namespace StarterAssets
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 		}
 
+		// tinggal ini pahami lagi
 		private void CameraRotation()
 		{
 			// if there is an input
