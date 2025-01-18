@@ -3,9 +3,11 @@ using StarterAssets;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] int damageAmount = 1;
     StarterAssetsInputs starterAssetsInputs;
+    const string SHOOT_STRING = "Shoot";
     void Awake()
     {
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
@@ -21,6 +23,7 @@ public class Weapon : MonoBehaviour
         if (!starterAssetsInputs.shoot) return;
 
         muzzleFlash.Play();
+        animator.Play(SHOOT_STRING, 0, 0f);
 
         RaycastHit hit;
 
