@@ -25,6 +25,12 @@ public class ActiveWeapon : MonoBehaviour
         HandleShoot();
     }
 
+    public void SwitchWeapon(WeaponSO weaponSO)
+    {
+        Debug.Log("Player picked " + weaponSO.name);
+    }
+
+
     private void HandleShoot()
     {
         if (!starterAssetsInputs.shoot) return;
