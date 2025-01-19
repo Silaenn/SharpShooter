@@ -1,5 +1,6 @@
 using UnityEngine;
 using StarterAssets;
+using Unity.VisualScripting;
 
 public class ActiveWeapon : MonoBehaviour
 {
@@ -27,7 +28,14 @@ public class ActiveWeapon : MonoBehaviour
 
     public void SwitchWeapon(WeaponSO weaponSO)
     {
-        Debug.Log("Player picked " + weaponSO.name);
+        if (currentWeapon)
+        {
+            Destroy(currentWeapon.gameObject);
+        }
+
+        Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
+        currentWeapon = newWeapon;
+        this.weaponSO = weaponSO;
     }
 
 
@@ -43,7 +51,6 @@ public class ActiveWeapon : MonoBehaviour
 
         if (!weaponSO.isAutoMatic)
         {
-
             starterAssetsInputs.ShootInput(false);
         }
     }
