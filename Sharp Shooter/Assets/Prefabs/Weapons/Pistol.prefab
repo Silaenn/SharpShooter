@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3274417239517592068}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181303426296781843}
   - component: {fileID: 1155945248807794451}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d91fae2703d43046a1c37804ae23dad, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -203,6 +203,10 @@ PrefabInstance:
     - target: {fileID: 1286233186258499010, guid: f179b913fd44f5c47b85f764696430b7, type: 3}
       propertyPath: m_Name
       value: Muzzle Flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286233186258499010, guid: f179b913fd44f5c47b85f764696430b7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4079186539531111519, guid: f179b913fd44f5c47b85f764696430b7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
