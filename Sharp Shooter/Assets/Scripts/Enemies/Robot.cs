@@ -21,6 +21,7 @@ public class Robot : MonoBehaviour
 
     void Update()
     {
+        if (!player) return;
         agent.SetDestination(player.transform.position);
     }
 
